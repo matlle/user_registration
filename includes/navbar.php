@@ -1,7 +1,11 @@
 <?php
 /*
 ##############################################
-# oXyShop: User registration app             #
+#     User registration app                  #
+#                                            #
+#	@@ -=::MATLLE::=-                    #
+#	@ paso.175@gmail.com                 #
+#	@ martial.babo@matlle.com            #
 ##############################################
 */
 

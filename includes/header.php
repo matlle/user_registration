@@ -1,3 +1,15 @@
+<?php
+/*
+##############################################
+#     User registration app                  #
+#                                            #
+#	@@ -=::MATLLE::=-                    #
+#	@ paso.175@gmail.com                 #
+#	@ martial.babo@matlle.com            #
+##############################################
+*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>

@@ -1,5 +1,16 @@
 <?php
 
+/*
+##############################################
+#     User registration app                  #
+#                                            #
+#	@@ -=::MATLLE::=-                    #
+#	@ paso.175@gmail.com                 #
+#	@ martial.babo@matlle.com            #
+##############################################
+*/
+
+
 // Base application URL
 $base_url = 'http://127.0.0.1:8080/user_registration/';
 
