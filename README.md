@@ -1,6 +1,6 @@
-         USER_REGISTRATION
-         <hr/>
-         Webapp User registration. With SOAP/REST webservices API.
+# USER_REGISTRATION
+
+Webapp User registration. With SOAP/REST webservices API.
 
 
 
