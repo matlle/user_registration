@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<definitions name="User"
+	targetNamespace="http://127.0.0.1:8080/edsa-oxyshop/wsUser.wsdl"
+	xmlns:tns="http://127.0.0.1:8080/user_registration/wsUser.wsdl"
+
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+	<message name="registerRequest">
+		<part name="name" type="xsd:string"/>
+		<part name="email" type="xsd:string"/>
+		<part name="password" type="xsd:string"/>
+		<part name="permissions" type="xsd:string"/>
+	</message>
+	<message name="registerResponse">
+		<part name="Result" type="xsd:string"/>
+	</message>
+
+	
+	<portType name="UserPortType">
+		<operation name="Register">
+			<input message="tns:registerRequest"/>
+			<output message="tns:registerResponse"/>
+		</operation>
+	</portType>
+
+	<binding name="UserBinding" type="tns:UserPortType">
+		<soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="Register">
+			<soap:operation soapAction="http://127.0.0.1:8080/user_registration/Register"/>
+			<input>
+				<soap:body use="encoded" namespace="http://127.0.0.1:8080/user_registration/wsUser.wsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</input>
+			<output>
+				<soap:body use="encoded" namespace="http://127.0.0.1:8080/user_registration/wsUser.wsdl" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+			</output>
+		</operation>
+	</binding>
+
+	<service name="UserWebService">
+		<port name="UserPort" binding="UserBinding">
+			<soap:address location="http://127.0.0.1:8080/user_registration/server.php"/>
+		</port>
+	</service>
+
+</definitions>
